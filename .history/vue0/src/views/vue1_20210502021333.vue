@@ -1,0 +1,26 @@
+<template>
+  <div>
+     <H1>{{t}}</H1>
+     likes: {{likes}}
+  </div>
+</template>
+
+<script>
+export default {
+    props: {
+        likes: {
+            type: Number,
+            default: 0
+        }
+        title: {
+            type: Number,
+            default: 0
+        }
+    }
+
+}
+</script>
+
+<style>
+
+</style>

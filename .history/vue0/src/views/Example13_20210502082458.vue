@@ -1,0 +1,40 @@
+<template>
+  <div>
+  <!-- 부모컴포넌트에서 자식컴포넌트의 이벤트 발생시키기
+  버튼 클릭이벤트 -->
+  <!-- 부모컴포넌트에서 자식컴포넌트의 메소드 실행시키기 -->
+   <button type="button" @click="callChildFunc">부모에 있는 클릭</button>
+  <Click ref="child"/>
+ 
+  </div>
+</template>
+
+<script>
+
+import click from '../components/click.vue';
+
+
+export default {
+  components: {
+      click,
+      //Vue
+  },
+ data () {
+     return {
+       title1: '부모컴포넌트에서 전송한 페이지타이틀 입니다.(ex11)',
+       likes1: 40,
+       isOk1: true,
+       author: {이름:'홍길동',},
+     }
+ },
+ methods: {
+   callChildFunc() {
+     //this.$refs.child.$refs.childbtn.childFunc();
+     this.$refs.child.childFunc();
+   },
+}
+}
+
+</script>
+<style scoped>  
+</style>

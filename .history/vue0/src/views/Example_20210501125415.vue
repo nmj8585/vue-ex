@@ -1,0 +1,27 @@
+<template>
+  <div>
+      <input type="text" v-model="valueModel"/>
+      <input type="number" v-model="valueModel2"/>
+  </div>
+</template>
+
+<script>
+export default {
+ data () {
+     return {
+         valueModel: '와우',
+         valueModel2: 1,
+     }
+ },
+ mounted () {
+     let valueModel3 = 3
+     console.log(this.valueModel2);
+     console.log(valueModel3);
+ }
+}
+//
+</script>
+
+<style>
+
+</style>
